@@ -6,20 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "transpile": "tsc --noEmit",
+    "prettify": "pretty-quick --staged"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.21.0",
-    "@emotion/react": "^11.14.0",
-    "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "geoiq-frontend-ui-kit": "^1.5.102",
     "lucide-react": "^0.523.0",
     "next": "15.3.4",
     "next-themes": "^0.4.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "tailwind-merge": "^3.3.1"
   },
@@ -31,6 +31,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
+    "husky": "^9.1.7",
+    "prettier": "^2.8.8",
+    "pretty-quick": "^3.1.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
