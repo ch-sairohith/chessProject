@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import "./chess-practice-modes.css"
+import { JSX } from "react"
 
 type DifficultyLevel = "Beginner" | "Intermediate" | "Advanced"
 

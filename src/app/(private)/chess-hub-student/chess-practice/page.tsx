@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { JSX, useState } from "react"
 import Link from "next/link"
 import { ChessPracticeModes } from "@/page/student-components/chess-practice"
 import { ChessStudies } from "@/page/student-components/chess-practice"
