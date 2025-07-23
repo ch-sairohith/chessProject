@@ -1,0 +1,12 @@
+    .box {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.tip {
+  background: #e0f2fe;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: #0369a1;
+}

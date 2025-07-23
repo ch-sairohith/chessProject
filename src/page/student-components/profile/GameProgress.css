@@ -1,0 +1,218 @@
+.game-progress-container {
+  padding: 0;
+  max-width: 100%;
+}
+
+.progress-header {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.progress-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trend-icon {
+  font-size: 20px;
+}
+
+.progress-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.progress-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.progress-item:hover {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.02) 0%, rgba(147, 51, 234, 0.02) 100%);
+  border-radius: 12px;
+  padding: 20px 16px;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.progress-item:last-child {
+  border-bottom: none;
+}
+
+.progress-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.month-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+}
+
+.games-played {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.progress-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.rating-value.up {
+  color: #059669;
+}
+
+.rating-value.down {
+  color: #dc2626;
+}
+
+.trend-arrow {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.winrate-section {
+  display: flex;
+  align-items: center;
+}
+
+.winrate-value {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.winrate-value.excellent {
+  color: #059669;
+  background: rgba(5, 150, 105, 0.1);
+}
+
+.winrate-value.good {
+  color: #0891b2;
+  background: rgba(8, 145, 178, 0.1);
+}
+
+.winrate-value.average {
+  color: #d97706;
+  background: rgba(217, 119, 6, 0.1);
+}
+
+.winrate-value.poor {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.1);
+}
+
+.progress-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.summary-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.summary-value.improvement {
+  color: #059669;
+}
+
+.summary-value.best {
+  color: #3b82f6;
+}
+
+.summary-value.total {
+  color: #7c3aed;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .progress-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .progress-right {
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .progress-title {
+    font-size: 20p
+  }
+}

@@ -1,0 +1,130 @@
+/* Container for all notifications */
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.notification-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height:430px;
+  overflow-y: auto;
+}
+@media (max-width: 850px) {
+  .notification-card-container {
+    width: 100%;
+    padding: 16px;
+  }
+}
+.notification-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+  border: 1px solid #e4e4e7;
+}
+
+.notification-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon container */
+.notification-icon {
+  margin-right: 12px;
+  margin-top: 4px;
+}
+
+/* Text content */
+.notification-content {
+  flex-grow: 1;
+  max-width: 450px;
+}
+
+.notification-content strong {
+  font-size: 16px;
+  display: block;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.notification-content div {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.notification-content small {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.notification-action {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2563eb;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.notification-action:hover {
+  background-color: #2563eb;
+  color: white;
+}
+.notification-card-container{
+    padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 720px;
+  margin: 30px auto;
+}
+.notification-action.MatchReady {
+  background-color:  #2563eb;
+  color: white;
+}
+.notification-action.MatchResult {
+  background-color: #4ca054;
+  color: white;
+}
+.notification-action.DailyPuzzle {
+  background-color:#9d59ef;
+border: 1px solid #9d59ef;
+  color: white;
+}
+.play-logo {
+  color: #4ca054;
+}
+.notification-icon.MatchReady{
+  width: 26px;
+  height: 26px;
+  background-color: #e2fbe8;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+border-radius: 15%;
+}
+.notification-icon.MatchResult{
+  width: 26px;
+  height: 26px;
+  background-color: #dee9fc;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+border-radius: 15%;
+}
+.notification-icon.DailyPuzzle{
+  width: 26px;
+  height: 26px;
+  background-color: #f1e8fd;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+border-radius: 15%;
+}

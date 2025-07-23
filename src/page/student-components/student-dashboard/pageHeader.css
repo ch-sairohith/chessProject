@@ -1,0 +1,91 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 100px;
+  background-color:white;
+  border-bottom: 1px solid #d1d5db;
+  font-family: 'Segoe UI', sans-serif;
+  position: fixed;
+  width: 100%;
+   z-index: 1000;
+}
+@media (max-width: 850px) {
+  .header-container {
+    padding: 16px 20px;
+  }
+}
+.header-title {
+  font-size: 24px;
+  font-weight: 650;
+  color: black;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.header-icon {
+  color: #4b5563;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.profile-link a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #111827;
+  font-size: 14px;
+}
+
+.user-grade {
+  font-size: 12px;
+  color: #6b7280;
+}
+.user-icon{
+  width:40px;
+  height:40px;
+  background-color:#6466e9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.user-info-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

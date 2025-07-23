@@ -1,0 +1,117 @@
+.ProfileCard {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProfileCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+}
+
+.ProfileAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: #f1f5f9;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.ProfileAvatar::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  z-index: -1;
+}
+
+.ProfileDetailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 32px;
+  flex: 1;
+  align-content: start;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+/* Special styling for rating */
+.detail:has(.detail-label:contains("Current Rating")) .detail-value {
+  color: #3b82f6;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Special styling for rank */
+.detail:has(.detail-label:contains("Class Rank")) .detail-value {
+  color: #059669;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  
+  
+  .ProfileAvatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+ 
+}
+
+@media (max-width: 480px) {
+  .ProfileCard {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .ProfileAvatar {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .ProfileDetailsGrid {
+    gap: 12px;
+  }
+  
+  .detail-value {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,76 @@
+.main-pairing-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 24px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 850px;
+}
+
+.pairings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.pairings-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.scroll-hint {
+  color: gray;
+  font-size: 14px;
+}
+
+.pairing-card {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.player-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  width: 40%;
+  text-align: center;
+}
+
+.vs-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  width: 20%;
+  text-align: center;
+}
+
+.start-session-btn-wrapper {
+  border-top: 1px solid #eee;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.start-session-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width:100%;
+}
+
+.start-session-btn:hover {
+  background-color: #388e3c;
+}

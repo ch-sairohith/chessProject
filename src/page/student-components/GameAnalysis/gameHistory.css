@@ -1,0 +1,95 @@
+.game-history-container {
+  padding: 2rem;
+  background: white;
+  font-family: 'Segoe UI', sans-serif;
+  border:1px solid #e5e7eb; /* light border */
+  border-radius: 12px;
+}
+
+.game-history-container h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.game-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white; /* white card background */
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e5e7eb; /* light border */
+  box-shadow: none; /* remove shadow if not needed */
+}
+.game-card:hover {
+  background: #f3f4f6; /* light gray on hover */
+}
+
+.game-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.opponent-info p {
+  margin: 0;
+}
+
+.subtext {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.game-right {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.rating-change {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.rating-change.gain {
+  color: #22c55e;
+}
+
+.rating-change.loss {
+  color: #ef4444;
+}
+
+.new-rating {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.analyze-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.analyze-btn:hover {
+  background: #f3f4f6;
+}

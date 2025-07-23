@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-const LeaderboardPage: FC = () => {
+const LeaderboardPage= () => {
   return <div>Leaderboard</div>;
 };
 

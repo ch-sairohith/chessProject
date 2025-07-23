@@ -1,0 +1,90 @@
+.overview-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 0;
+}
+
+.overview-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.overview-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.15);
+  border-color: #cbd5e1;
+}
+
+.overview-card:hover::before {
+  transform: scaleX(1);
+}
+
+.overview-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.overview-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+/* Special styling for specific cards */
+.overview-card:nth-child(3) .overview-value,
+.overview-card:nth-child(6) .overview-value {
+  color: #059669; /* Wins and Peak Rating in green */
+}
+
+.overview-card:nth-child(4) .overview-value {
+  color: #dc2626; /* Losses in red */
+}
+
+.overview-card:nth-child(5) .overview-value {
+  color: #d97706; /* Draws in orange */
+}
+
+@media (max-width: 768px) {
+  .overview-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  
+  .overview-card {
+    padding: 16px;
+  }
+  
+  .overview-value {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

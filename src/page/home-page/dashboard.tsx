@@ -3,7 +3,7 @@ import { Typography } from "geoiq-frontend-ui-kit";
 import { ChevronLeft } from "lucide-react";
 import OverViewPanel from "./components/overview-panel/overview-panel";
 
-const DashBoard: FC = () => {
+const DashBoard=() => {
   const data = {
     overview: {
       activePlayers: 152,

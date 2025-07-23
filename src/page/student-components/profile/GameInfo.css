@@ -1,0 +1,186 @@
+.game-info-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 24px 0;
+  border: 1px solid #e5e7eb;
+}
+
+.tab-buttons {
+  display: flex;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 8px;
+  gap: 4px;
+  position: relative;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.tab-button:hover::before {
+  opacity: 1;
+}
+
+.tab-button:hover {
+  color: #475569;
+  transform: translateY(-1px);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  font-weight: 600;
+}
+
+.tab-button.active::before {
+  display: none;
+}
+
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+/* Ripple effect on click */
+.tab-button:active {
+  transform: translateY(0);
+}
+
+.tab-content {
+  padding: 32px 24px;
+  background: #ffffff;
+  min-height: 400px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-buttons {
+    width:100%
+  }
+
+  .tab-button {
+    width:200px;
+  }
+
+  .tab-content {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-button {
+    flex: 1 1 100%;
+    min-width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Focus states for accessibility */
+.tab-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.tab-button.active:focus {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Loading state animation */
+.tab-content.loading {
+  position: relative;
+}
+
+.tab-content.loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Enhanced hover effects */
+.tab-button:not(.active):hover {
+  background: rgba(59, 130, 246, 0.05);
+  color: #3b82f6;
+}
+
+/* Smooth tab indicator */
+.tab-buttons::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
+}
