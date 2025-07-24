@@ -1,0 +1,400 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure full width and consistent background */
+html, body {
+  width: 100%;
+  background-color: #f9fafb;
+  overflow-x: hidden;
+}
+
+/* Main Container - Full width background */
+.dashboard-container {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 100px;
+}
+
+/* KPI Section */
+.kpi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+/* Button Links Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.kpi-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-width: 160px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.kpi-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.kpi-button:active {
+  transform: translateY(0);
+}
+
+/* Button Color Variations */
+.kpi-button.practice-mode {
+  background: linear-gradient(135deg, #9d59ef 0%, #8b5cf6 100%);
+}
+
+.kpi-button.analysis-mode {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+/* Notification + Leaderboard Container */
+.notification-leaderboard-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.notification-leaderboard-container > * {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  border: 1px solid #f1f5f9;
+  transition: box-shadow 0.2s ease;
+  min-height: 400px;
+}
+
+.notification-leaderboard-container > *:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Styles (up to 767px) */
+@media (max-width: 767px) {
+  .dashboard-container {
+    padding-top: 80px;
+    width: 100%;
+  }
+
+  .kpi-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 32px auto;
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .kpi-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+
+  .notification-leaderboard-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .notification-leaderboard-container > * {
+    padding: 20px;
+    border-radius: 12px;
+    min-height: auto;
+    width: 100%;
+  }
+}
+
+/* Small Mobile Styles (up to 480px) */
+@media (max-width: 480px) {
+  .kpi-container {
+    padding: 0 12px;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .button-container {
+    padding: 0 12px;
+    width: 100%;
+  }
+
+  .kpi-button {
+    padding: 14px 20px;
+    font-size: 0.875rem;
+  }
+
+  .notification-leaderboard-container {
+    padding: 0 12px;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .notification-leaderboard-container > * {
+    padding: 16px;
+  }
+}
+
+/* Tablet Styles (768px - 1023px) - iPad Mini Specific Fix */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashboard-container {
+    padding-top: 120px;
+    width: 100%;
+    background-color: #f9fafb;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* iPad Mini KPI Container - Fixed Grid Layout */
+  .kpi-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Force exactly 2 columns */
+    gap: 20px;
+    padding: 0 30px; /* Reduced padding to give more space */
+    margin-bottom: 48px;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Ensure KPI cards don't overflow */
+  .kpi-container > * {
+    min-width: 0; /* Allow cards to shrink */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Button container for iPad */
+  .button-container {
+    gap: 20px;
+    margin: 48px auto;
+    padding: 0 30px; /* Match KPI container padding */
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+  }
+
+  .kpi-button {
+    padding: 16px 28px;
+    font-size: 1rem;
+    min-width: 180px;
+    flex: 0 0 auto;
+  }
+
+  /* Notification container */
+  .notification-leaderboard-container {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 30px; /* Match other containers */
+    width: 100%;
+    max-width: none;
+  }
+
+  .notification-leaderboard-container > * {
+    padding: 28px;
+    border-radius: 20px;
+    width: 100%;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+}
+
+/* iPad Mini Portrait Specific (768px width) */
+@media (min-width: 768px) and (max-width: 768px) {
+  .kpi-container {
+    padding: 0 25px; /* Even more conservative padding */
+    gap: 16px;
+  }
+  
+  .button-container {
+    padding: 0 25px;
+  }
+  
+  .notification-leaderboard-container {
+    padding: 0 25px;
+  }
+}
+
+/* iPad Mini Landscape (1024px width) */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .kpi-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns in landscape */
+    padding: 0 40px;
+    gap: 20px;
+  }
+}
+
+/* Desktop Styles (1025px+) */
+@media (min-width: 1025px) {
+  .dashboard-container {
+    padding-top: 140px;
+    width: 100%;
+  }
+
+  .kpi-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    padding: 0 60px;
+    margin-bottom: 56px;
+  }
+
+  .button-container {
+    gap: 24px;
+    margin: 56px auto;
+    padding: 0 60px;
+  }
+
+  .kpi-button {
+    padding: 18px 32px;
+    font-size: 1.125rem;
+    min-width: 200px;
+  }
+
+  /* Side by side on desktop */
+  .notification-leaderboard-container {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 40px;
+    padding: 0 60px;
+    align-items: flex-start;
+  }
+
+  .notification-leaderboard-container > * {
+    flex: 1 1 50%;
+    padding: 32px;
+    border-radius: 24px;
+    min-height: 500px;
+    width: auto;
+  }
+}
+
+/* Large Desktop Styles (1280px+) */
+@media (min-width: 1280px) {
+  .kpi-container {
+    gap: 32px;
+    padding: 0 80px;
+  }
+
+  .button-container {
+    padding: 0 80px;
+  }
+
+  .notification-leaderboard-container {
+    gap: 48px;
+    padding: 0 80px;
+  }
+
+  .notification-leaderboard-container > * {
+    min-height: 550px;
+  }
+}
+
+/* Enhanced KPI Styles */
+.kpi-container > * {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi-container > *:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Win/Loss/Draw Styling Enhancement */
+#kpi-content-wins {
+  color: #10b981 !important;
+  font-weight: 600;
+}
+
+#kpi-content-losses {
+  color: #ef4444 !important;
+  font-weight: 600;
+}
+
+#kpi-content-draws {
+  color: #f59e0b !important;
+  font-weight: 600;
+}
+
+/* Loading and Interaction States */
+.kpi-button:focus {
+  outline: none;
+  ring: 2px solid rgba(59, 130, 246, 0.5);
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .kpi-button,
+  .kpi-container > *,
+  .notification-leaderboard-container > * {
+    transition: none;
+  }
+  
+  .kpi-button:hover,
+  .kpi-container > *:hover {
+    transform: none;
+  }
+}
+
+/* Prevent horizontal overflow on all tablet sizes */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  * {
+    max-width: 100%;
+  }
+  
+  /* Ensure no element exceeds viewport width */
+  .kpi-container,
+  .button-container,
+  .notification-leaderboard-container {
+    box-sizing: border-box;
+  }
+}

@@ -56,3 +56,9 @@
 #kpi-content-draws{
     color:#c18d2f;
 }
+@media (max-width: 768px) {
+  .Kpi {
+    width: 360px;
+    margin-left: 10px;
+  }
+}

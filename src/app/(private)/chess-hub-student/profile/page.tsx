@@ -3,10 +3,11 @@ import React from 'react'
 import ProfileCard from '@/page/student-components/profile/ProfileCard'
 import { GameInfo } from '@/page/student-components/profile'
 import Link from 'next/link'
+import './ProfilePage.css';
 
 const ProfilePage = () => {
   return (
-  <div>
+  <div className="profile-page-container">
     <div className="fixed-header">
         <div className="header-container">
           <Link href="/chess-hub-student" className="back-link">

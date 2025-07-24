@@ -94,3 +94,34 @@
   transform: translateY(8px);
   color: #333;
 }
+@media (max-width: 768px) {
+  .grades-container {
+    padding: 16px;
+    margin: 20px auto;
+  }
+
+  .grades-heading {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .dropdown-column {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .dropdown {
+    font-size: 15px;
+    height: 40px;
+  }
+
+  .chip {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .remove-btn {
+    font-size: 16px;
+  }
+  
+}

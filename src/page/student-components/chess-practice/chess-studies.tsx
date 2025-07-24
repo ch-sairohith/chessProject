@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import "./chess-studies.css"
+import { JSX } from "react"
 
 type StudyCategory = "Opening" | "Endgame" | "Middlegame" | "Tactics"
 type StudyDifficulty = "Beginner" | "Intermediate" | "Advanced"

@@ -141,7 +141,7 @@ const NotificationCard = () => {
             </div>
             <div className={`notification-action ${notification.header.replace(/\s/g, '')}`}>
               <Link href="https://lichess.org/kRUQQP09">
-                {notification.header === 'Match Ready' && 'Join Match'}
+                {notification.header === 'Match Ready' && 'Join '}
                 {notification.header === 'Match Result' && 'Analysis'}
                 {notification.header === 'Daily Puzzle' && 'Solve Now'}
               </Link>

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import './DashboardLeaderBoard.css';
 import Link from 'next/link';
@@ -69,14 +70,16 @@ const DashboardLeaderBoard: React.FC<Props> = ({ id }) => {
             className={`leaderboard-item ${student.isYou ? 'you' : ''}`}
           >
             <div className="rank">{student.rank}</div>
-            <div className='info'>
-              <div className='student-logo'>{student.name.trim().split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase()}</div>
+            <div className="info">
+              <div className="student-logo">
+                {student.name.trim().split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase()}
+              </div>
               <div className="meta-info">
                 <div className="name">{student.name}</div>
                 <div className="meta">
                   Grade {student.grade}, Section {student.section}
-                </div>  
-            </div>
+                </div>
+              </div>
             </div>
             <div className="rating">
               <div className="points">{student.rating}</div>
@@ -85,7 +88,7 @@ const DashboardLeaderBoard: React.FC<Props> = ({ id }) => {
           </div>
         ))}
       </div>
-      <div className='view-full-link'>
+      <div className="view-full-link">
         <Link href="/chess-hub-student/Leaderboard">View Full Leaderboard</Link>
       </div>
     </div>

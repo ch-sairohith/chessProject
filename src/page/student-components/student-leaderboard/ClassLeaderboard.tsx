@@ -2,24 +2,19 @@ import React from 'react';
 import { Medal, TrendingUp, TrendingDown } from 'lucide-react';
 import "./ClassLeaderboard.css";
 
-const sampleData = [
-  { id: 1, name: 'Emma Davis', rating: 1285, games: 32, winRate: 69, change: 25 },
-  { id: 2, name: 'Alex Johnson', rating: 1250, games: 28, winRate: 64, change: 12 },
-  { id: 3, name: 'John Doe', rating: 1180, games: 24, winRate: 63, change: 8 },
-  { id: 4, name: 'Sarah Wilson', rating: 1165, games: 26, winRate: 54, change: -5 },
-  { id: 5, name: 'Mike Chen', rating: 1142, games: 22, winRate: 55, change: 3 },
-  { id: 6, name: 'Lisa Brown', rating: 1128, games: 23, winRate: 52, change: -2 },
-  { id: 7, name: 'David Kim', rating: 1075, games: 20, winRate: 50, change: 6 },
-  { id: 8, name: 'Nina Patel', rating: 1050, games: 21, winRate: 48, change: -1 },
-  { id: 9, name: 'Carlos Rivera', rating: 990, games: 18, winRate: 45, change: 0 },
-  { id: 10, name: 'Fatima Zahra', rating: 970, games: 19, winRate: 44, change: 4 },
-];
-
 interface LeaderboardProps {
   userId: number;
+  sampleData: {
+    id: number; 
+    name: string;
+    rating: number; 
+    games: number;
+    winRate: number;
+    change: number;
+  }[];
 }
 
-const Leaderboard = ({ userId }: LeaderboardProps) => {
+const Leaderboard = ({ userId,sampleData }: LeaderboardProps) => {
   const data = sampleData.map(player => ({
     ...player,
     isCurrentUser: player.id === userId,
