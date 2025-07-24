@@ -112,7 +112,7 @@ const NotificationCard = () => {
         not = [...not, temp];
       } else if (data[i].type === 'daily_puzzle') {
         const dailyPuzzle = data[i] as DailyPuzzle;
-        let temp = {
+        const temp = {
           header: 'Daily Puzzle',
           content: `New ${dailyPuzzle.puzzleType} puzzle available (ID: ${dailyPuzzle.puzzleId})`,
           time: dailyPuzzle.time,

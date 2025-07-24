@@ -20,7 +20,7 @@ export default function ChessPracticePage(): JSX.Element {
       {/* Fixed Header */}
       <div className="fixed-header">
         <div className="header-container">
-          <Link href="/dashboard" className="back-link">
+          <Link href="/chess-hub-student" className="back-link">
             <svg className="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="m15 18-6-6 6-6" />
             </svg>

@@ -1,7 +1,7 @@
 // File: app/profile/page.tsx
 import React from 'react'
 import ProfileCard from '@/page/student-components/profile/ProfileCard'
-import { GameInfo } from '@/page/student-components/profile'
+import { GameInfo } from '@/page/student-components/profile/GameInfo'
 import Link from 'next/link'
 import './ProfilePage.css';
 

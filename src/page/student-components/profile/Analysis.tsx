@@ -29,15 +29,6 @@ export const Analysis = () => {
     { game: 70, rating: 1205 },
     { game: 80, rating: 1240 },
   ]
-
-  const openingPerformance = [
-    { opening: "Italian Game", games: 15, winRate: 73, avgRating: 1180 },
-    { opening: "Ruy Lopez", games: 12, winRate: 67, avgRating: 1165 },
-    { opening: "Queen's Gambit", games: 10, winRate: 60, avgRating: 1190 },
-    { opening: "Sicilian Defense", games: 8, winRate: 50, avgRating: 1200 },
-    { opening: "French Defense", games: 6, winRate: 83, avgRating: 1175 },
-  ]
-
   const timeControlStats = [
     { control: "Blitz (5+0)", games: 45, winRate: 62, avgAccuracy: 85 },
     { control: "Rapid (10+0)", games: 35, winRate: 57, avgAccuracy: 88 },
@@ -202,7 +193,6 @@ export const Analysis = () => {
         </div>
       </div>
 
-      {/* Opening Performance */}
       {/* Time Control Analysis */}
       <div className="chart-section">
         <div className="chart-header">
