@@ -8,7 +8,7 @@ export default function Page() {
   const [selectedClasses, setSelectedClasses] = useState<string[]>([]);
   const [generatePairings, setGeneratepairings] = useState(false);
   const [selectedPlayers, setSelectedPlayers] = useState<string[]>([]);
-  const [pairedPlayers, setPairedPlayers] = useState<string[][]>([]);
+  const [_pairedPlayers, setPairedPlayers] = useState<string[][]>([]);
 
   const studentsData: Record<string, Record<string, string[]>> = {
     "Grade 6": {
@@ -44,7 +44,7 @@ export default function Page() {
   useEffect(() => {
     let studentsToAggregate: string[] = [];
 
-    for (let cls of selectedClasses) {
+    for (const cls of selectedClasses) {
       const parts = cls.split(" ");
       const grade = `${parts[0]} ${parts[1]}`;
       const section = `${parts[2]} ${parts[3]}`;

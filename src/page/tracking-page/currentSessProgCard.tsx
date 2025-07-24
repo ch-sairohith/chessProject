@@ -250,7 +250,7 @@ const CurrentSessProgCard: React.FC = () => {
                       <div>Status</div>
                     </div>
                     <div className="Toggle-card-body">
-                      {sessionData.matches.filter((match,i)=>match.status!=='Finished').map((match, i) => (
+                      {sessionData.matches.filter((match,_i)=>match.status!=='Finished').map((match, i) => (
                         <div className="Toggle-card-expansion" key={i}>
                           <div>
                             <div className="player-name">
@@ -292,7 +292,7 @@ const CurrentSessProgCard: React.FC = () => {
                       <div>Rating Chnage</div>  
                     </div>
                     <div>
-                    {sessionData.matches.filter((match,index)=>{return match.status=="Finished"}).map((match,index)=>{
+                    {sessionData.matches.filter((match,_index)=>{return match.status=="Finished"}).map((match,index)=>{
                         return (<div className="Toggle-card-expansion" key={index}>
                             <div>
                             <div className="player-name">

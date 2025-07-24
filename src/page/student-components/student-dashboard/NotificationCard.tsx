@@ -95,7 +95,7 @@ const NotificationCard = () => {
     for (let i = 0; i < data.length; i++) {
       if (data[i].type === 'match_invite') {
         const matchInvite = data[i] as MatchInvite;
-        let temp = {
+        const temp = {
           header: 'Match Ready',
           content: `You have been paired with ${matchInvite.opponent.name} (Grade ${matchInvite.opponent.grade} - Section ${matchInvite.opponent.section}, Rating ${matchInvite.opponent.rating})`,
           time: matchInvite.time,
@@ -103,8 +103,8 @@ const NotificationCard = () => {
         not = [...not, temp];
       } else if (data[i].type === 'match_result') {
         const matchResult = data[i] as MatchResult;
-        let resultText = matchResult.result === 'win' ? 'won' : matchResult.result === 'loss' ? 'lost' : 'drew';
-        let temp = {
+        const resultText = matchResult.result === 'win' ? 'won' : matchResult.result === 'loss' ? 'lost' : 'drew';
+        const temp = {
           header: 'Match Result',
           content: `You ${resultText} against ${matchResult.opponent.name} (Grade ${matchResult.opponent.grade} - Section ${matchResult.opponent.section}, Rating ${matchResult.opponent.rating}). Rating change: ${matchResult.ratingChange}`,
           time: matchResult.time,
