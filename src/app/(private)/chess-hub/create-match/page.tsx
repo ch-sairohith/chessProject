@@ -9,7 +9,7 @@ export default function Page() {
   const [generatePairings, setGeneratepairings] = useState(false);
   const [selectedPlayers, setSelectedPlayers] = useState<string[]>([]);
   // eslint-disable-next-line no-unused-vars
-  const [_pairedPlayers, setPairedPlayers] = useState<string[][]>([]);
+ // const [_pairedPlayers, setPairedPlayers] = useState<string[][]>([]);
 
   const studentsData: Record<string, Record<string, string[]>> = {
     "Grade 6": {
@@ -70,7 +70,7 @@ export default function Page() {
       {generatePairings && (
         <MatchPairingCard
           students={selectedPlayers}
-          setPairedPlayers={setPairedPlayers} 
+          //setPairedPlayers={setPairedPlayers} 
         />
       )}
     </div>

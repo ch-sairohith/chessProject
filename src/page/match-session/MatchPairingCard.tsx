@@ -4,10 +4,10 @@ import './matchPairingCard.css';
 
 const MatchPairingCard = ({
   students,
-  setPairedPlayers
+  //setPairedPlayers
 }: {
   students: string[];
-  setPairedPlayers: (value: string[][]) => void;
+  //setPairedPlayers: (value: string[][]) => void;
 }) => {
   const [pairedArray, setPairedArray] = useState<string[][]>([]);
 
@@ -33,7 +33,7 @@ const MatchPairingCard = ({
     }
 
     setPairedArray(pairs);
-    setPairedPlayers(pairs);
+   // setPairedPlayers(pairs);
   }, [students]);
 
   return (
