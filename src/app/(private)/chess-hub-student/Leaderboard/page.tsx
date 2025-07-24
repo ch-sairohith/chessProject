@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { ClassLeaderboard } from '@/page/student-components/student-leaderboard';
 import './LeaderboardPage.css';
 
-export const page = () => {
+export const Page = () => {
   const [view, setView] = useState<'class' | 'school'>('class');
 
   const sampleData = [{ id: 1, name: "Ali Baba", rating: 1150, games: 24, winRate: 63, change: 15 },
@@ -72,4 +72,4 @@ export const page = () => {
   );
 };
 
-export default page;
+export default Page;
