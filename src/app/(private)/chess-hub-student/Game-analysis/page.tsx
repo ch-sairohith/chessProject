@@ -6,7 +6,7 @@ import { Overview } from '@/page/student-components/GameAnalysis/overview'
 import './gameAnalysis.css'
 import Link from 'next/link'
 
-export const Page = () => {
+export default function Page(){
   const [activeTab, setActiveTab] = useState<'overview' | 'history'>('overview')
 
   return (
@@ -45,4 +45,3 @@ export const Page = () => {
     </div>
   )
 }
-export default Page;
