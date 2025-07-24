@@ -3,7 +3,7 @@ import React from 'react';
 import { CurrentSessProgCard } from '@/page/tracking-page';
 import Link from 'next/link';
 
-const page = () => {
+export default function Page ()  {
   return (
     <div >
       
@@ -40,4 +40,4 @@ const page = () => {
   );
 };
 
-export default page;
+

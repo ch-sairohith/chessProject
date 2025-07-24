@@ -5,7 +5,7 @@ import { GameInfo } from '@/page/student-components/profile/GameInfo'
 import Link from 'next/link'
 import './ProfilePage.css';
 
-const ProfilePage = () => {
+function ProfilePage() {
   return (
   <div className="profile-page-container">
     <div className="fixed-header">
