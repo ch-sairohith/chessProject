@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import "./chess-studies.css"
-import { JSX } from "react"
 
 type StudyCategory = "Opening" | "Endgame" | "Middlegame" | "Tactics"
 type StudyDifficulty = "Beginner" | "Intermediate" | "Advanced"
@@ -66,7 +65,7 @@ const featuredChessStudies: ChessStudy[] = [
   },
 ]
 
-export function ChessStudies(): JSX.Element {
+export function ChessStudies() {
   const handleOpenStudy = (study: ChessStudy): void => {
     console.log(`Opening study: ${study.name}`)
   }

@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import "./chess-practice-modes.css"
-import { JSX } from "react"
 
 type DifficultyLevel = "Beginner" | "Intermediate" | "Advanced"
 
@@ -83,7 +82,7 @@ const chessPracticeModes: ChessPracticeMode[] = [
   },
 ]
 
-export function ChessPracticeModes(): JSX.Element {
+export function ChessPracticeModes(){
   const handleStartPractice = (mode: ChessPracticeMode): void => {
     console.log(`Starting practice mode: ${mode.title}`)
   }

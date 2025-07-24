@@ -82,7 +82,7 @@ const chessPracticeModes: ChessPracticeMode[] = [
   },
 ]
 
-export function ChessPracticeModes(): JSX.Element {
+export function ChessPracticeModes() {
   const handleStartPractice = (mode: ChessPracticeMode): void => {
     console.log(`Starting practice mode: ${mode.title}`)
   }
