@@ -1,5 +1,5 @@
 import React from "react";
-import "./leaderboard.css" 
+import "./Leaderboard.css" 
 const Leaderboard=()=>{
     const data=[{StudentName:"Arjun Varma",Grade:"Grade 8",UserName:"arjun_chess_master"},{},{}]
 
