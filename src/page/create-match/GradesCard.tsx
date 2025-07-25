@@ -53,7 +53,7 @@ const GradesCard: React.FC<GradesCardProps> = ({ selectedClasses, setSelectedCla
   const availableSections = sections[selectedGrade] || [];
 
   return (
-    <>
+    <div className="grades-card">
       <div className="grades-container">
         <div className="grades-heading">
           <span role="img" aria-label="user">👥</span> Select Classes & Sections
@@ -104,7 +104,7 @@ const GradesCard: React.FC<GradesCardProps> = ({ selectedClasses, setSelectedCla
       </div>
 
       {showRemovePlayers && <RemovePlayers onClose={onClose} selectedplayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}/>}
-    </>
+    </div>
   );
 };
 

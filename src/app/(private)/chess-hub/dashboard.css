@@ -1,0 +1,186 @@
+.dashboard-container {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 32px;
+  height:60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* ↓ This adds the shadow */
+  position: fixed;
+  top: 0;
+  width:100%;
+  z-index: 1000;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.kpi-section {
+  padding-top:80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 10px;
+  padding-left:24px;
+  padding-right: 24px;
+}
+
+.kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.kpi-icon {
+  width: 36px;
+  height: 36px;
+  background: #eef2ff;
+  padding: 8px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.kpi-icon.green {
+  color: #16a34a;
+  background: #dcfce7;
+}
+
+.kpi-icon.orange {
+  color: #ea580c;
+  background: #ffedd5;
+}
+
+.kpi-icon.yellow {
+  color: #eab308;
+  background: #fef9c3;
+}
+
+.kpi-icon.white {
+  color: white;
+  background: none;
+  padding: 0;
+}
+
+.kpi-title {
+  font-size: 14px;
+  color: #475569;
+  margin: 0 0 4px 0;
+}
+
+.kpi-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+.link-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.link-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.link-card.blue {
+  background-color: #3b82f6;
+}
+
+.link-card.gold {
+  background-color: #d97706;
+}
+
+.link-card.green {
+  background-color: #16a34a;
+}
+
+/* iPad only - 2x2 grid layout */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .kpi-section {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 24px !important;
+  }
+
+  .kpi-card {
+    padding: 24px;
+  }
+
+  .link-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .link-card {
+    flex: 0 1 180px;
+   width:200px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .link-card h3 {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+/* Desktop - keep original 4 column layout */
+@media screen and (min-width: 1024px) {
+  .kpi-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .kpi-card {
+    padding: 26px;
+  }
+
+  .link-section {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .link-card {
+    flex: 0 1 220px;
+    max-width: 260px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .link-card h3 {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+}

@@ -1,8 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { GradesCard } from '@/page/match-session';
-import { MatchSettingsCard } from '@/page/match-session';
-import { MatchPairingCard } from '@/page/match-session';
+import { GradesCard } from '@/page/create-match';
+import { MatchSettingsCard } from '@/page/create-match';
+import { MatchPairingCard } from '@/page/create-match';
+import Link from 'next/link';
+import './create-match.css';
 
 export default function Page() {
   const [selectedClasses, setSelectedClasses] = useState<string[]>([]);
@@ -58,6 +60,18 @@ export default function Page() {
 
   return (
     <div>
+      <div className="fixed-header">
+        <div className="header-container">
+          <Link href="/chess-hub" className="back-link">
+            <svg className="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            Back to Dashboard
+          </Link>
+        </div>
+      </div>
+
+
       <GradesCard
         selectedClasses={selectedClasses}
         setSelectedClasses={setSelectedClasses} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}

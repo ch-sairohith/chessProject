@@ -1,4 +1,5 @@
 .grades-container {
+  margin-top: 30px;
   max-width: 850px;
   margin: 40px auto;
   padding: 24px;
@@ -124,4 +125,8 @@
     font-size: 16px;
   }
   
+}
+
+.grades-card {
+  margin-top: 50px;
 }
