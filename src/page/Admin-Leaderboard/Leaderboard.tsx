@@ -46,7 +46,7 @@ interface FilterState {
 }
 
 
-export default function Leaderboard({ })  {
+export default function Leaderboard()  {
   const mockStudentsByGradeSection: StudentsByGradeSection = {
     '6A': [
       {
