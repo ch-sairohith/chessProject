@@ -225,7 +225,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({ }) => {
   useEffect(() => {
     const allStudents: LeaderboardStudent[] = [];
 
-    Object.entries(mockStudentsByGradeSection).forEach(([key, students]) => {
+    Object.entries(mockStudentsByGradeSection).forEach(([, students]) => {
       students.forEach(student => {
         const gamesPlayed = Math.floor(Math.random() * 25) + 5;
         const wins = Math.floor(Math.random() * gamesPlayed * 0.7);
