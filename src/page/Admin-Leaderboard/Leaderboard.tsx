@@ -45,11 +45,8 @@ interface FilterState {
   selectedSections: { [grade: number]: Set<string> };
 }
 
-interface LeaderboardProps {
-  onBackToDashboard?: () => void;
-}
 
-export const Leaderboard: React.FC<LeaderboardProps> = ({ }) => {
+export default function Leaderboard({ })  {
   const mockStudentsByGradeSection: StudentsByGradeSection = {
     '6A': [
       {
@@ -762,5 +759,3 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({ }) => {
     </div>
   );
 };
-
-export default Leaderboard;

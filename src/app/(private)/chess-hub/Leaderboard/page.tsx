@@ -4,7 +4,7 @@ import { Leaderboard } from '@/page/Admin-Leaderboard'
 export const Page = () => {
   return (
     <div>
-    <Leaderboard onBackToDashboard={() => {}} />
+    <Leaderboard  />
     </div>
   )
 }
