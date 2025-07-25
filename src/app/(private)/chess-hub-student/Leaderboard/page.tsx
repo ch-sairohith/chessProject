@@ -4,10 +4,7 @@ import React, { useState } from 'react';
 import { ClassLeaderboard } from '@/page/student-components/student-leaderboard';
 import './LeaderboardPage.css';
 
-// You can explicitly type it as React.FC<object> or React.FC<{}> to denote no props
-// or just ensure it's a simple function component as it is now, and the error
-// is likely from lingering type inference from a previous state or other files.
-export default function Page(): React.JSX.Element { // Adding return type for clarity, though often inferred
+export default function Leaderboard() { 
   const [view, setView] = useState<'class' | 'school'>('class');
 
   const sampleData = [{ id: 1, name: "Ali Baba", rating: 1150, games: 24, winRate: 63, change: 15 },
@@ -65,7 +62,6 @@ export default function Page(): React.JSX.Element { // Adding return type for cl
 
         <div className="leaderboard-content">
           {view === 'class' ? (
-            // Assuming ClassLeaderboard is correctly imported and typed
             <ClassLeaderboard sampleData={sampleData} userId={8} />
           ) : (
             <div className="school-placeholder">School Leaderboard Coming Soon...</div>
